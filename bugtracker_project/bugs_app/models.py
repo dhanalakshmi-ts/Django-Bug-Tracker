@@ -18,6 +18,8 @@ class Bug(models.Model):
     desc = models.TextField()
     priority = models.CharField(max_length=2, choices = PRIORITY_CHOICES)
     state = models.CharField(max_length=2, choices = STATE_CHOICES)
+    # team_name=models.CharField(max_length=10)
+    # bug_count=models.IntegerField()
 
     def __str__(self):
         return self.name

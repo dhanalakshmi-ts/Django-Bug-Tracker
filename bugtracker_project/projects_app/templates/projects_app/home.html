@@ -8,6 +8,8 @@
                 <th scope="col">Name</th>
                 <th scope="col">Organization/Company</th>
                 <th scope="col">Technology Used</th>
+                <th scope="col">Team Name</th>
+                <th scope="col">Bug Count</th>
             </thead>
             <tbody>
                 {% for project in projects %}
@@ -16,6 +18,8 @@
                         <td><a href="{% url 'bug_list' project.id %}">{{project.name}}</a></td>
                         <td>{{project.organization_name}}</td>
                         <td>{{project.technology}}</td>
+                        <td>{{project.team_name}}</td>
+                        <td>{{project.bug_count}}</td>
                     </tr>
                 {% endfor %}
             </tbody>
